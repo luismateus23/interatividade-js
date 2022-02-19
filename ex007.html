@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interatividade com JavaScript</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+       
+       body{
+           font-family: 'Noto Sans', sans-serif ;
+           text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.205);
+       }
+       
+       h1{
+           text-align: center;
+           margin-bottom: 50px;
+       }
+       div{
+            background-color: blue;
+            color: white;
+            box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.466);
+            border-radius: 10px;
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            line-height: 250px;
+            text-align: center;
+            font-family: 'Noto Sans', sans-serif ;
+            font-size: 24pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interatividade com JavaScript</h1>
+    <div id="quadrado" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Caixa</div>
+    <script> 
+       var a = window.document.getElementById('quadrado')
+
+       function clicar(){
+           a.innerText = 'Clicou'
+           a.style.background = 'green'
+           a.style.color = 'white'
+           a.style.borderRadius = '50%'
+           a.style.width = '250px'
+           
+       }
+       function entrar(){
+           a.innerText ='Entrou'
+           a.style.background = 'yellow'
+           a.style.color = 'black'
+           a.style.width = '500px'
+
+       }
+       function sair(){
+           a.innerText = 'Saiu'
+           a.style.backgroundColor = 'red'
+           a.style.borderRadius = '0%'
+           a.style.width = '250px'
+
+       }
+
+    </script>
+</body>
+</html>
